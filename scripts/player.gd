@@ -37,3 +37,14 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, input_x * player_data.max_speed, player_data.acceleration * delta)
 			# Apply gravity
 			velocity.y += player_data.gravity * delta
+			
+		State.JUMPING:
+			# Transition to falling when velocity becomes positive
+			if velocity.y >= 0:
+				state = State.FALLING
+			# Move horizontally
+			velocity.x = move_toward(velocity.x, input_x * player_data.max_speed, player_data.acceleration * delta)
+			# Apply gravity
+			velocity.y += player_data.gravity * delta
+	# Apply movement
+	move_and_slide()

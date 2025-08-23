@@ -2,15 +2,15 @@ extends CharacterBody2D
 
 var player_data =preload("res://resources/PlayerData.tres")
 
-@export var move_speed = 200
+#@export var move_speed = 200a
 
-@export var jump_height : float
-@export var jump_time_to_peak : float
-@export var jump_time_to_descent : float
+#@export var jump_height : float
+#@export var jump_time_to_peak : float
+#@export var jump_time_to_descent : float
 
-@onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
-@onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
-@export var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
+@onready var jump_velocity : float = ((2.0 * player_data.jump_height) / player_data.jump_time_to_peak) * -1.0
+@onready var jump_gravity : float = ((-2.0 * player_data.jump_height) / (player_data.jump_time_to_peak * player_data.jump_time_to_peak)) * -1.0
+@export var fall_gravity : float = ((-2.0 * player_data.jump_height) / (player_data.jump_time_to_descent * player_data.jump_time_to_descent)) * -1.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

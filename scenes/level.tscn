@@ -1,25 +1,54 @@
-[gd_scene load_steps=5 format=3 uid="uid://b620uv0aleduv"]
+[gd_scene load_steps=3 format=3 uid="uid://b620uv0aleduv"]
 
-[ext_resource type="Texture2D" uid="uid://bkrl5l36skr4p" path="res://icon.svg" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://snro545n512j" path="res://scenes/player.tscn" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://do2jn6y0xga3k" path="res://scenes/block.tscn" id="2_w8frs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q6dc"]
-size = Vector2(32, 32)
-
 [node name="Level" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(72, 24)
+position_smoothing_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_w7c3h")]
 position = Vector2(72, 24)
 
+[node name="RemoteTransform2D" parent="Player" index="2"]
+remote_path = NodePath("../../Camera2D")
+
 [node name="Block" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(-192, 296)
 
-[node name="Sprite2D" type="Sprite2D" parent="Block"]
-position = Vector2(64, 88)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_2q6dc")
-centered = false
+[node name="Block2" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(-128, 296)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
-position = Vector2(80, 104)
-shape = SubResource("RectangleShape2D_2q6dc")
+[node name="Block3" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(-64, 296)
+
+[node name="Block4" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(0, 296)
+
+[node name="Block5" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(64, 296)
+
+[node name="Block6" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(128, 296)
+
+[node name="Block7" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(192, 296)
+
+[node name="Block8" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(256, 296)
+
+[node name="Block9" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(320, 296)
+
+[node name="Block10" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(384, 296)
+
+[node name="Block11" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(448, 296)
+
+[node name="Block12" parent="." instance=ExtResource("2_w8frs")]
+position = Vector2(512, 296)
+
+[editable path="Player"]

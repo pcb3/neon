@@ -1,5 +1,4 @@
 extends Resource
-
 class_name PlayerData
 
 @export var speed := 200
@@ -8,4 +7,3 @@ class_name PlayerData
 @export var jump_height := 0.0
 @export var jump_time_to_peak := 0.0
 @export var jump_time_to_descent := 0.0
-@export var health = 0

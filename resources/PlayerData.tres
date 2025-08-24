@@ -4,11 +4,10 @@
 
 [resource]
 script = ExtResource("1_a77g8")
-speed = 200
+speed = 250
 acceleration = 800
 friction = 1000
-jump_height = 70.0
-jump_time_to_peak = 0.4
-jump_time_to_descent = 0.35
-health = 100
+jump_height = 100.0
+jump_time_to_peak = 0.5
+jump_time_to_descent = 0.4
 metadata/_custom_type_script = "uid://binfqq77dwkf8"

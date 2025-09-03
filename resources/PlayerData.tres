@@ -11,6 +11,6 @@ jump_height = 100.0
 jump_time_to_peak = 0.4
 jump_time_to_descent = 0.3
 dash_duration = 0.2
-dash_speed = 600.0
+dash_speed = 500.0
 dash_cooldown = 0.5
 metadata/_custom_type_script = "uid://binfqq77dwkf8"
